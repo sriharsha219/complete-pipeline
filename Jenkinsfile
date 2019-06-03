@@ -78,7 +78,7 @@ echo "Project installed"
     credentialsId: 'Nexus',
     artifacts: [
         [artifactId: 'sample-maven-webapp',
-         classifier: 'debug',
+         classifier: '',
          file: '/home/ec2-user/.m2/repository/org/sample-maven-webapp/1.0-SNAPSHOT/sample-maven-webapp-1.0-SNAPSHOT.war',
          type: 'war']
     ]
