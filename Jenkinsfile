@@ -92,8 +92,12 @@ stage('Deploy-Staging'){
 steps{
 echo "Deploying war file from nexus to staging machine"
 sh "cd /home/ec2-user/"
-sh "wget http://3.130.67.158:8081/nexus/service/local/repositories/my-nexus-snapshots/content/repository/my-nexus-snapshots/org/sample-maven-webapp/1.0-SNAPSHOT/sample-maven-webapp-1.0-20190603.045427-1.war"
-sh "scp -i EC2-Keypair.pem sample-maven-webapp-1.0-20190603.035843-1.war ec2-user@3.130.67.158:8080/"
+sh "mkdir tempfolder"
+sh "cd /home/ec2-user/tempfolder"
+sh "wget http://3.130.67.158:8081/nexus/service/local/repositories/my-nexus-snapshots/content/repository/my-nexus-snapshots/org/sample-maven-webapp/1.0-SNAPSHOT/*.wa$
+sh "scp -i EC2-Keypair.pem /home/ec2-user/tempfolder/*.war ec2-user@3.130.67.158:8080/"
+sh "cd /home/ec2-user/"
+sh "rm -rf tempfolder"
 echo "Deployment to staging completed"
       }
    }
