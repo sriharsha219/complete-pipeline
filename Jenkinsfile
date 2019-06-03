@@ -86,7 +86,7 @@ echo "Project installed"
              )
            }
         }
-
+}
 stage('Deploy-Staging'){
 
 steps{
