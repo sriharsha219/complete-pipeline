@@ -81,6 +81,11 @@ echo "Project installed"
          classifier: '',
          file: '/org/sample-maven-webapp/1.0-SNAPSHOT/sample-maven-webapp-1.0-SNAPSHOT.war',
          type: 'war']
+        [artifactId: 'sample-maven-webapp',
+         classifier: '',
+         file: '/org/sample-maven-webapp/1.0-SNAPSHOT/sample-maven-webapp-1.0-SNAPSHOT.pom',
+         type: 'xml']
+
     ]
              )
            }
