@@ -79,8 +79,8 @@ echo "Project installed"
     artifacts: [
         [artifactId: 'sample-maven-webapp',
          classifier: 'debug',
-         file: 'sample-maven-webapp-' + pom.version + '.jar',
-         type: 'jar']
+         file: 'sample-maven-webapp-' + pom.version + '.war',
+         type: 'war']
     ]
              )
            }
