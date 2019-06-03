@@ -8,12 +8,9 @@
   <name>sample-maven-webapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
 <distributionManagement>
-    ...
     <snapshotRepository>
-        ...
         <uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
-    ...
 </distributionManagement>
   <dependencies>
     <dependency>
