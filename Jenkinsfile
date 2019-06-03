@@ -71,7 +71,7 @@ echo "Project installed"
                         nexusArtifactUploader(
                         nexusVersion: 'nexus3',
     protocol: 'http',
-    nexusUrl: '3.130.67.158:8081/nexus',
+    nexusUrl: '3.130.67.158:8081/nexus/content/repositories/my-nexus-snapshots',
     groupId: pom.groupId,
     version: pom.version,
     repository: 'my-nexus-snapshots',
