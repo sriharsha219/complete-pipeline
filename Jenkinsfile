@@ -87,22 +87,10 @@ echo "Project installed"
            }
         }
 }
-stage('Deploy-Staging'){
-
-steps{
-echo "Deploying war file from nexus to staging machine"
-echo "$pwd"
-sh "cd /home/ec2-user/"
-sh "mkdir -p /home/ec2-user/tempfolder"
-sh "cd /home/ec2-user/tempfolder"
-sh "wget --no-parent -A 'sample*.war' http://3.130.67.158:8081/nexus/service/local/repositories/my-nexus-snapshots/content/repository/my-nexus-snapshots/org/sample-maven-webapp/1.0-SNAPSHOT/"
-sh "cd /home/ec2-user/"
-sh "scp -i /home/ec2-user/EC2-Keypair.pem /home/ec2-user/tempfolder/*.war ec2-user@3.130.67.158:8080/"
-sh "cd /home/ec2-user/"
-sh "rm -rf tempfolder"
-echo "Deployment to staging completed"
-      }
-   }
+stage ("Deploy-Staging") {		
+            steps {
+                build 'Deploy-War-File'
+            }
 }
 post {
         always {
