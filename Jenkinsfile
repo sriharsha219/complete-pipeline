@@ -91,6 +91,7 @@ stage('Deploy-Staging'){
 
 steps{
 echo "Deploying war file from nexus to staging machine"
+echo "$pwd"
 sh "cd /home/ec2-user/"
 sh "mkdir tempfolder"
 sh "cd /home/ec2-user/tempfolder"
