@@ -90,7 +90,8 @@ echo "Project installed"
 stage ("Deploy-Staging") {		
             steps {
                 build 'Deploy-War-File'
-            }
+       }
+   }
 }
 post {
         always {
