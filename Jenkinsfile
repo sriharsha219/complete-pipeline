@@ -94,7 +94,7 @@ echo "Deploying war file from nexus to staging machine"
 sh "cd /home/ec2-user/"
 sh "mkdir tempfolder"
 sh "cd /home/ec2-user/tempfolder"
-sh "wget http://3.130.67.158:8081/nexus/service/local/repositories/my-nexus-snapshots/content/repository/my-nexus-snapshots/org/sample-maven-webapp/1.0-SNAPSHOT/*.wa$
+sh "wget http://3.130.67.158:8081/nexus/service/local/repositories/my-nexus-snapshots/content/repository/my-nexus-snapshots/org/sample-maven-webapp/1.0-SNAPSHOT/*.war"
 sh "scp -i EC2-Keypair.pem /home/ec2-user/tempfolder/*.war ec2-user@3.130.67.158:8080/"
 sh "cd /home/ec2-user/"
 sh "rm -rf tempfolder"
